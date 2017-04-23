@@ -1,6 +1,8 @@
 # ApacheParser
 ApacheParser is a project made for school by Ramses 'Forcide' Houps.
+
 This project parses the access.log from the Apache Webserver.
+
 It can give information about hosts that visited the Webserver or 404 status reports.
 
 # Installation
