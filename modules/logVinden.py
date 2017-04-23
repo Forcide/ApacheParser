@@ -26,7 +26,7 @@ def logVinden():
     """
     distroNaam = distro()
 
-    if os.path.exists('access.log')
+    if os.path.exists('access.log'):
         return 'access.log'
 
     elif distroNaam == 'debian':
