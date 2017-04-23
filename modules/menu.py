@@ -8,11 +8,11 @@ def menu():
         try:
             keuze = int(input('Wat is uw keuze? '))
 
-            if keuze <= 0 or keuze >= 5:
+            if keuze < 1 or keuze > 4:
                 raise ValueError
 
         except ValueError:
-            print('\nGebruik cijfers 1 t/m .... voor het invoeren van uw keuze!\n')
+            print('\nGebruik cijfers 1 t/m 4 voor het invoeren van uw keuze!\n')
             continue
 
         return keuze

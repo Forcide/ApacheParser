@@ -15,8 +15,7 @@ def distro():
         return 'centos'
 
     else:
-        print('\nUw systeem wordt niet ondersteund.')
-        exit()
+        return 'anders'
 
 def logVinden():
     """
@@ -34,3 +33,7 @@ def logVinden():
 
     elif distroNaam == 'centos':
         return '/var/log/httpd/access_log'
+
+    else:
+        print('\nUw systeem wordt niet ondersteund.')
+        exit()
