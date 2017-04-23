@@ -1,6 +1,6 @@
 def menu():
     while True:
-        print('1) Print of mail het volledige log')
+        print('\n1) Print of mail het volledige log')
         print('2) Print (aantal) unieke hosts')
         print('3) Print de status meldingen (aantal)')
         print('4) Stop')

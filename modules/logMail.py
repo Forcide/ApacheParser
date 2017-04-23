@@ -2,7 +2,7 @@ from modules import logVinden
 from email.mime.text import MIMEText
 import smtplib
 
-def mail(naarMail):
+def mailVerzenden(naarMail):
     logLocatie = logVinden.logVinden()
 
     with open(logLocatie) as log:
@@ -74,4 +74,4 @@ def logMail():
 
             loop = 0
 
-        mail(naarMail)
+        mailVerzenden(naarMail)
