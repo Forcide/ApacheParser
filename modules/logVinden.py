@@ -35,5 +35,5 @@ def logVinden():
         return '/var/log/httpd/access_log'
 
     else:
-        print('\nUw systeem wordt niet ondersteund.')
+        print('\nUw systeem wordt niet ondersteund, lees de README goed door!')
         exit()
