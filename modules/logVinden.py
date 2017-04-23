@@ -1,4 +1,4 @@
-import platform
+import platform, os
 
 def distro():
     """
@@ -21,9 +21,15 @@ def distro():
 def logVinden():
     """
     Deze functie localiseert het Apache log.
+    Geimporteerde modules:
+    - os
     """
     distroNaam = distro()
-    if distroNaam == 'debian':
+
+    if os.path.exists('access.log')
+        return 'access.log'
+
+    elif distroNaam == 'debian':
         return '/var/log/apache2/access.log'
 
     elif distroNaam == 'centos':
