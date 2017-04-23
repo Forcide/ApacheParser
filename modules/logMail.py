@@ -1,8 +1,11 @@
+from modules import logVinden
 from email.mime.text import MIMEText
 import smtplib
 
 def mail(naarMail):
-    with open('access.log') as log:
+    logLocatie = logVinden.logVinden()
+
+    with open(logLocatie) as log:
         bericht = MIMEText(log.read())
 
     bericht['Subject'] = 'Apache log'
@@ -54,9 +57,11 @@ def logMail():
         loop = 0
 
     if keuze == 1:
+        logLocatie = logVinden.logVinden()
         print('')
-        with open ('access.log') as log:
+        with open (logLocatie) as log:
             print(log.read())
+
     elif keuze == 2:
         loop = 1
         while loop == 1:

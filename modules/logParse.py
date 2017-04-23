@@ -1,3 +1,4 @@
+from modules import logVinden
 import re
 
 def logParse():
@@ -14,9 +15,11 @@ def logParse():
     ]
     patroon = re.compile(r'\s+'.join(delen)+r'\s*\Z')
 
-    with open('access.log') as log:
+    logLocatie = logVinden.logVinden()
+
+    with open(logLocatie) as log:
         logLines = log.readlines()
-    logLines = [line.rstrip('\n') for line in open('access.log')]
+    logLines = [line.rstrip('\n') for line in open(logLocatie)]
 
     logList = []
     for logLine in logLines:
