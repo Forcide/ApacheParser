@@ -8,13 +8,13 @@ def mailVerzenden(naarMail):
     with open(logLocatie) as log:
         bericht = MIMEText(log.read())
 
-    bericht['Subject'] = 'Apache log'
-    bericht['From'] = 'psn.ramses@gmail.com'
-    bericht['To'] = naarMail
-
     accountList = mailAccount()
     login = accountList[0]
     wachtwoord = accountList[1]
+
+    bericht['Subject'] = 'Apache log'
+    bericht['From'] = login
+    bericht['To'] = naarMail
 
     try:
         server = smtplib.SMTP('smtp.gmail.com', 587)
