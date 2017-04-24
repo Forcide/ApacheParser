@@ -32,5 +32,5 @@ def menuAfsluiten():
                 raise ValueError
 
         except ValueError:
-            print('\nGebruik \'J\' of \'N\' voor het invoeren van uw keuze!\n')
+            print('\nGebruik \'J\' of \'N\' voor het invoeren van uw keuze!')
             continue
