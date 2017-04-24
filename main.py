@@ -25,5 +25,12 @@ def main():
     elif keuze == 4:
         exit()
 
-while True:
-    main()
+    hoofdmenu = menu.menuAfsluiten()
+
+    if hoofdmenu == 'J':
+        main()
+
+    elif hoofdmenu == 'N':
+        exit()
+
+main()

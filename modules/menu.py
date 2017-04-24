@@ -16,3 +16,21 @@ def menu():
             continue
 
         return keuze
+
+def menuAfsluiten():
+    while True:
+        try:
+            terug = str(input('\nWilt u terug naar het hoofdmenu?(J/N) '))
+
+            if terug == 'j' or terug == 'J':
+                return 'J'
+
+            elif terug == 'n' or terug == 'N':
+                return 'N'
+
+            else:
+                raise ValueError
+
+        except ValueError:
+            print('\nGebruik \'J\' of \'N\' voor het invoeren van uw keuze!\n')
+            continue
