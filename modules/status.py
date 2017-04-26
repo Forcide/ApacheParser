@@ -15,4 +15,8 @@ def aantalStatus():
     print()
 
     for status,aantal in statussenDict.items():
-        print('Er zijn ' + str(aantal) + ', ' + str(status) + ' status meldingen')
+        if aantal == 1:
+            print('Er is 1, ' + str(status) + ' status melding' )
+
+        else:
+            print('Er zijn ' + str(aantal) + ', ' + str(status) + ' status meldingen')
