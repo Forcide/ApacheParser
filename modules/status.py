@@ -6,7 +6,7 @@ def aantalStatus():
 
     logList = logParse.logParse()
     for dict in logList:
-            statussenList.append(dict['status'])
+        statussenList.append(dict['status'])
 
     statussenDict = defaultdict(int)
     for status in statussenList:

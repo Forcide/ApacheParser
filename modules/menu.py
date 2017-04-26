@@ -1,18 +1,19 @@
 def menu():
     while True:
         print('\n1) Print of mail het volledige log')
-        print('2) Print (aantal) unieke hosts')
-        print('3) Print de status meldingen (aantal)')
-        print('4) Stop')
+        print('2) Print de top drie meest bezochte webpagina\'s')
+        print('3) Print (aantal) unieke hosts')
+        print('4) Print de status meldingen (aantal)')
+        print('5) Stop')
 
         try:
             keuze = int(input('Wat is uw keuze? '))
 
-            if keuze < 1 or keuze > 4:
+            if keuze < 1 or keuze > 5:
                 raise ValueError
 
         except ValueError:
-            print('\nGebruik cijfers 1 t/m 4 voor het invoeren van uw keuze!\n')
+            print('\nGebruik cijfers 1 t/m 5 voor het invoeren van uw keuze!\n')
             continue
 
         return keuze
