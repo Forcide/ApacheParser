@@ -13,6 +13,7 @@ To run the program, run:
 python3 main.py
 ```
 
+# Mail function
 To use the mail function, rename the settings.ini-example to settings.ini and insert your gmail username and password.
 
 Please note that it only works with gmail.
