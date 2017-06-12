@@ -23,4 +23,6 @@ This script is build to automatically find the Apache log.
 
 Please note that it only works with Debian and CentOS.
 
-You can override this by changing the 'file' setting in the settings.ini and placing the log file in the same directory.
+You can override this by changing the 'file' setting in the settings.ini-example and renaming it to settings.ini.
+
+Place the log file in the same directory.
