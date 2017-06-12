@@ -1,0 +1,9 @@
+# This file contains settings for the ApacheParser
+# Rename to: settings.ini
+
+[Mail]
+mail = NONE
+password = NONE
+
+[File]
+file = NONE

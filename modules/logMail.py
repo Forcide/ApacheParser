@@ -1,6 +1,6 @@
 from modules import logVinden
 from email.mime.text import MIMEText
-import smtplib
+import smtplib, os, configparser
 
 def mailVerzenden(naarMail):
     logLocatie = logVinden.logVinden()
@@ -29,7 +29,11 @@ def mailVerzenden(naarMail):
 
 def mailAccount():
     try:
-        account = [line.rstrip('\n') for line in open('gmail.txt')]
+        account = []
+        config = configparser.ConfigParser()
+        config.read('settings.ini')
+        account.append(config['Mail']['mail'])
+        account.append(config['Mail']['password'])
 
     except:
         print('\nEr is een fout opgetreden, lees de README goed door!')
@@ -63,15 +67,20 @@ def logMail():
             print(log.read())
 
     elif keuze == 2:
-        loop = 1
-        while loop == 1:
-            try:
-                naarMail = input('\nNaar welk e-mail adres moet het log verstuurd worden? ')
+        if os.path.exists('settings.ini'):
+            loop = 1
+            while loop == 1:
+                try:
+                    naarMail = input('\nNaar welk e-mail adres moet het log verstuurd worden? ')
 
-            except ValueError:
-                print('\nGeen geldig e-mail adres!')
-                continue
+                except ValueError:
+                    print('\nGeen geldig e-mail adres!')
+                    continue
 
-            loop = 0
+                loop = 0
 
-        mailVerzenden(naarMail)
+                mailVerzenden(naarMail)
+
+        else:
+            print('\nEr is geen settings.ini gevonden, lees de README goed door!')
+            exit()
