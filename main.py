@@ -1,4 +1,4 @@
-from modules import menu, hosts, logMail, status, webpagina
+from modules import menu, hosts, logMail, status, webpagina, zoekInLog
 
 """"
 Dit is de start file van het programma, hierin worden alle modules geladen en zo nodig uitgevoerd.
@@ -9,6 +9,7 @@ Geimporteerde modules:
 - logMail
 - status
 - webpagina
+- zoekInLog
 """
 
 def main():
@@ -27,6 +28,9 @@ def main():
         status.aantalStatus()
 
     elif keuze == 5:
+        zoekInLog.zoekInLog()
+
+    elif keuze == 6:
         exit()
 
     hoofdmenu = menu.menuAfsluiten()
