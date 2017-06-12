@@ -10,7 +10,7 @@ def zoekInLog():
 
     while True:
         try:
-            zoekInput = str(input('\nTyp het woord waar u op wilt zoeken: '))
+            zoekInput = str(input('\nTyp het woord waar u op wilt zoeken: \n'))
 
             if zoekInput == '' or zoekInput == ' ':
                 raise ValueError
