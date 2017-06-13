@@ -1,6 +1,11 @@
 from modules import logVinden
 
 def zoekInLog():
+    """
+    Deze functie zoekt uit welke distro gebruikt word.
+    Geimporteerde modules:
+    - platform
+    """
     logLocatie = logVinden.logVinden()
 
     with open(logLocatie) as log:
