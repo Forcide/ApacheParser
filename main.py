@@ -1,18 +1,17 @@
 from modules import menu, hosts, logMail, status, webpagina, zoekInLog
 
-""""
-Dit is de start file van het programma, hierin worden alle modules geladen en zo nodig uitgevoerd.
-Het menu wordt gestart en de keuze wordt verwezen naar een van de modules.
-Geimporteerde modules:
-- menu
-- hosts
-- logMail
-- status
-- webpagina
-- zoekInLog
-"""
-
 def main():
+    """"
+    Dit is de start file/functie van het programma, hierin worden alle modules geladen en zo nodig uitgevoerd.
+    Het menu wordt gestart en de keuze wordt verwezen naar een van de modules.
+    Geimporteerde modules:
+    - menu
+    - hosts
+    - logMail
+    - status
+    - webpagina
+    - zoekInLog
+    """
     keuze = menu.menu()
 
     if keuze == 1:
