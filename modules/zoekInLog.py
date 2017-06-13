@@ -1,6 +1,11 @@
 from modules import logVinden
 
 def zoekInLog():
+    """
+    Deze functie zoekt uit welke distro gebruikt word.
+    Geimporteerde modules:
+    - platform
+    """
     logLocatie = logVinden.logVinden()
 
     with open(logLocatie) as log:
@@ -10,12 +15,13 @@ def zoekInLog():
 
     while True:
         try:
-            zoekInput = str(input('\nTyp het woord waar u op wilt zoeken: \n'))
+            zoekInput = str(input('\nTyp het woord waar u op wilt zoeken: '))
 
             if zoekInput == '' or zoekInput == ' ':
                 raise ValueError
 
             else:
+                print()
                 for string in logLines:
                     if zoekInput in string:
                         print(string)

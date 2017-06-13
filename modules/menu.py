@@ -1,4 +1,9 @@
 def menu():
+    """
+    Deze functie voert het menu uit.
+    Allereest worden de keuzes geprint waarna een keuze gegeven kan worden.
+    De keuze word terug gegeven aan het hoofdprogramma.
+    """
     while True:
         print('\n1) Print of mail het volledige log')
         print('2) Print de top drie meest bezochte webpagina\'s')
@@ -20,6 +25,11 @@ def menu():
         return keuze
 
 def menuAfsluiten():
+    """
+    Waarneer het programma klaar is vraagt deze functie of het menu opnieuw
+    opgegeven moet worden.
+    Deze keuze word terug gegeven aan het hoofdprogramma.
+    """
     while True:
         try:
             terug = str(input('\nWilt u terug naar het hoofdmenu?(J/N) '))
