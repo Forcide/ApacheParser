@@ -14,7 +14,7 @@ python3 main.py
 ```
 
 # Mail function
-To use the mail function, rename the settings.ini-example to settings.ini and insert your gmail username and password.
+To use the mail function, rename the settings-example.ini to settings.ini and insert your gmail username and password.
 
 Please note that it only works with gmail.
 
@@ -23,6 +23,6 @@ This script is build to automatically find the Apache log.
 
 Please note that it only works with Debian and CentOS.
 
-You can override this by changing the 'file' setting in the settings.ini-example and renaming it to settings.ini.
+You can override this by changing the 'file' setting in the settings-example.ini and renaming it to settings.ini.
 
 Place the log file in the same directory.
