@@ -23,9 +23,9 @@ def mailVerzenden(naarMail):
         server.login(login, wachtwoord)
         server.send_message(bericht)
         server.quit()
-        print('\nMail verzonden')
+        print('\nMail verzonden naar ' + naarMail + ' !')
     except:
-        print('\nKon mail niet verzenden')
+        print('\nKon mail niet verzenden!')
 
 def mailAccount():
     try:

@@ -22,10 +22,16 @@ def zoekInLog():
 
             else:
                 print()
+                niksGevonden = 1
                 for string in logLines:
                     if zoekInput in string:
                         print(string)
+                        niksGevonden = 0
                     listNummer += 1
+
+                if niksGevonden != 0:
+                    print('Er is niks gevonden.')
+
                 return
 
         except ValueError:

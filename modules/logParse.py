@@ -17,8 +17,6 @@ def logParse():
 
     logLocatie = logVinden.logVinden()
 
-    with open(logLocatie) as log:
-        logLines = log.readlines()
     logLines = [line.rstrip('\n') for line in open(logLocatie)]
 
     logList = []
