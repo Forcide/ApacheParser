@@ -2,7 +2,8 @@ import platform, os, configparser
 
 def distro():
     """
-    Deze functie zoekt uit welke distro gebruikt word.
+    Deze functie zoekt uit welke distro gebruikt wordt om de locatie van het log
+    te vinden.
     Geimporteerde modules:
     - platform
     """
@@ -19,7 +20,8 @@ def distro():
 
 def logVinden():
     """
-    Deze functie localiseert het Apache log.
+    Deze functie localiseert het Apache log m.b.v. de distro naam.
+    Wanneer een naam is opgegeven in de settings.ini wordt deze gebruikt.
     Geimporteerde modules:
     - os
     - configparser

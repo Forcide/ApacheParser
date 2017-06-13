@@ -1,8 +1,19 @@
 from modules import logVinden
 from email.mime.text import MIMEText
-import smtplib, os, configparser
+import smtplib, os, configparser, datetime
 
 def mailVerzenden(naarMail):
+    """
+    Deze functie verstuurd het log wanneer hier in het mail menu om gekozen wordt.
+    Eerst wordt het log ingelezen voor de mail.
+    Het account wordt opgevraagd bij de mailAccount functie.
+    De mail wordt opgemaakt en verzonden.
+    Geimporteerde modules:
+    - logVinden
+    - MIMEText
+    - datetime
+    - smtplib
+    """
     logLocatie = logVinden.logVinden()
 
     with open(logLocatie) as log:
@@ -12,7 +23,7 @@ def mailVerzenden(naarMail):
     login = accountList[0]
     wachtwoord = accountList[1]
 
-    bericht['Subject'] = 'Apache log'
+    bericht['Subject'] = 'Apache log ' + datetime.datetime.now().strftime("%d-%m-%Y %H:%M")
     bericht['From'] = login
     bericht['To'] = naarMail
 
@@ -23,11 +34,19 @@ def mailVerzenden(naarMail):
         server.login(login, wachtwoord)
         server.send_message(bericht)
         server.quit()
-        print('\nMail verzonden naar ' + naarMail + ' !')
+
+        print('\nMail verzonden naar ' + naarMail + '!')
+
     except:
         print('\nKon mail niet verzenden!')
 
 def mailAccount():
+    """
+    In deze functie wordt het mail account opgehaald uit de settings.ini en
+    teruggeven aan de mailVerzenden functie.
+    Geimporteerde modules:
+    - configparser
+    """
     try:
         account = []
         config = configparser.ConfigParser()
@@ -42,6 +61,17 @@ def mailAccount():
     return account
 
 def logMail():
+    """
+    Deze funcie fungeerd als een menu.
+    Er wordt gevraagd of het log geprint of gemaild moet worden.
+    Wanneer het printen is wordt het log geprint.
+    Wanneer het mailen is wordt er naar het mail adres gevraagd waar het log
+    heen gestuurd zal moeten worden.
+    Dit mail adres wordt meegegeven aan de functie mailVerzenden.
+    Geimporteerde modules:
+    - logVinden
+    - os
+    """
     loop = 1
     while loop == 1:
         print('\nWat wilt u doen met het log?')

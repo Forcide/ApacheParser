@@ -1,6 +1,12 @@
 from modules import logParse
 
 def uniekeHosts():
+    """
+    Deze functie print alle unieke hosts welke voorkomen in het log.
+    De hosts worden in een list gezet en later geprint.
+    Geimporteerde modules:
+    - logParse
+    """
     hosts = []
 
     logList = logParse.logParse()

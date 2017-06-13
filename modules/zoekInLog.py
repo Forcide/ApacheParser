@@ -2,9 +2,10 @@ from modules import logVinden
 
 def zoekInLog():
     """
-    Deze functie zoekt uit welke distro gebruikt word.
+    Deze functie zoekt ingegeven input in het log.
+    Wanneer de input overeenkomt met een zinsdeel zal deze zin geprint worden.
     Geimporteerde modules:
-    - platform
+    - logVinden
     """
     logLocatie = logVinden.logVinden()
 

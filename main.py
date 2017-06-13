@@ -2,7 +2,7 @@ from modules import menu, hosts, logMail, status, webpagina, zoekInLog
 
 """"
 Dit is de start file van het programma, hierin worden alle modules geladen en zo nodig uitgevoerd.
-Het menu wordt gestart en de keuze wordt verwezen naar een van de modules..
+Het menu wordt gestart en de keuze wordt verwezen naar een van de modules.
 Geimporteerde modules:
 - menu
 - hosts
