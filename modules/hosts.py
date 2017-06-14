@@ -8,6 +8,7 @@ def uniekeHosts():
     en later geprint.
     Geimporteerde modules:
     - logParse
+    - defaultdict
     """
     hosts = []
 
