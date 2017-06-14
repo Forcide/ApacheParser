@@ -1,4 +1,5 @@
 from modules import logParse
+from collections import defaultdict
 
 def uniekeHosts():
     """
@@ -13,12 +14,20 @@ def uniekeHosts():
     for dict in logList:
             hosts.append(dict['host'])
 
-    hosts = list(set(hosts))
-    aantal = len(hosts)
+    hostsDict = defaultdict(int)
+    for host in hosts:
+        hostsDict[host] += 1
 
+    aantal = len(hostsDict)
+
+    print()
     print('\nEr zijn ' + str(aantal) + ' unieke hosts welke connectie hebben gehad met de webserver.\n')
 
     nummer = 1
-    for host in hosts:
-        print(str(nummer) + ". " + str(hosts[nummer - 1]))
+    for host in hostsDict.items():
+        print(str(nummer) + '. ' + str(host[0]) + ' heeft ' + str(host[1]) + ' keer een request gestuurd.')
         nummer += 1
+    #nummer = 1
+    #for host in hostsDict.items():
+    #    print(str(nummer) + ". " + str(host[nummer - 1]))
+    #    nummer += 1
