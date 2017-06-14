@@ -4,7 +4,8 @@ from collections import defaultdict
 def uniekeHosts():
     """
     Deze functie print alle unieke hosts welke voorkomen in het log.
-    De hosts worden in een list gezet en later geprint.
+    De hosts en het aantal keer dat deze voorkomt worden in een dictionary gezet
+    en later geprint.
     Geimporteerde modules:
     - logParse
     """
@@ -27,7 +28,3 @@ def uniekeHosts():
     for host in hostsDict.items():
         print(str(nummer) + '. ' + str(host[0]) + ' heeft ' + str(host[1]) + ' keer een request gestuurd.')
         nummer += 1
-    #nummer = 1
-    #for host in hostsDict.items():
-    #    print(str(nummer) + ". " + str(host[nummer - 1]))
-    #    nummer += 1
